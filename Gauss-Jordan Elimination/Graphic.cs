@@ -20,6 +20,7 @@ namespace Gauss_Jordan_Elimination
         private void Form1_Load(object sender, EventArgs e)
         {
             richTextBox.ReadOnly = true;
+            panelInputValues.Visible = false;
         }
 
         private void btTest_Click(object sender, EventArgs e)
@@ -38,9 +39,27 @@ namespace Gauss_Jordan_Elimination
         private void btInput_Click(object sender, EventArgs e)
         {
             int inputNumber = 0;
+
             Input input = new Input();
-            input.input(Int32.TryParse(tbInputMatrice.Text, out inputNumber));
-            richTextBox.Text = input.input(4);
+
+            if (int.TryParse(tbInputMatrice.Text, out inputNumber))
+            {
+                if (inputNumber > 10)
+                {
+                    MessageBox.Show("number cannot be grater than 10, please insert input again");
+                    tbInputMatrice.Text = "";
+                    return;
+                }
+                else
+                {
+                    richTextBox.Text = input.input(inputNumber);
+                }
+            }
+            else
+            {
+                MessageBox.Show("problem with parsing string to int - please load input again");
+            }
+
         }
 
         private void tbInputMatrice_KeyPress(object sender, KeyPressEventArgs e)
@@ -52,7 +71,8 @@ namespace Gauss_Jordan_Elimination
                 e.Handled = true;
             }
 
-            if (badInput){
+            if (badInput)
+            {
                 MessageBox.Show("please insert number from 1 to 10");
                 tbInputMatrice.Text = "";
                 badInput = false;

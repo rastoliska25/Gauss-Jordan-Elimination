@@ -10,16 +10,19 @@ namespace Gauss_Jordan_Elimination
     {
         string inputText;
         int row, col;
+        int[,] matriceInput;
         public string input(int x)
         {
             for (int row = 1; row < x + 1; row++)
             {
                 for (int col = 1; col < x + 1; col++)
                 {
-                    inputText = inputText + "0";
+                    inputText = inputText + "0  ";
                 }
-                inputText = inputText + "\n";
+                inputText = inputText + "\n\n";
             }
+            matriceInput = new int[x,x];
+            Matrice matrice = new Matrice(matriceInput);
             return inputText;
         }
 
@@ -27,5 +30,20 @@ namespace Gauss_Jordan_Elimination
         {
             throw new NotImplementedException();
         }
+
+        public string inputValues(int x)
+        {
+            for (int row = 1; row < x + 1; row++)
+            {
+                for (int col = 1; col < x + 1; col++)
+                {
+                    inputText = inputText + "0  ";
+                }
+                inputText = inputText + "\n\n";
+            }
+            return inputText;
+        }
+
+
     }
 }

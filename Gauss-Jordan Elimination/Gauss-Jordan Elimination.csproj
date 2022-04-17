@@ -54,6 +54,7 @@
       <DependentUpon>Graphic.cs</DependentUpon>
     </Compile>
     <Compile Include="Input.cs" />
+    <Compile Include="Matrice.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Graphic.resx">

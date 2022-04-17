@@ -37,6 +37,9 @@ namespace Gauss_Jordan_Elimination
             this.btInput = new System.Windows.Forms.Button();
             this.tbInputMatrice = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.panelInputValues = new System.Windows.Forms.Panel();
+            this.labelValue = new System.Windows.Forms.Label();
+            this.panelInputValues.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -68,15 +71,15 @@ namespace Gauss_Jordan_Elimination
             // 
             // richTextBox
             // 
-            this.richTextBox.Location = new System.Drawing.Point(134, 412);
+            this.richTextBox.Location = new System.Drawing.Point(134, 380);
             this.richTextBox.Name = "richTextBox";
-            this.richTextBox.Size = new System.Drawing.Size(2315, 1056);
+            this.richTextBox.Size = new System.Drawing.Size(2315, 1088);
             this.richTextBox.TabIndex = 3;
             this.richTextBox.Text = "";
             // 
             // btClearRichTextBox
             // 
-            this.btClearRichTextBox.Location = new System.Drawing.Point(2313, 342);
+            this.btClearRichTextBox.Location = new System.Drawing.Point(2313, 312);
             this.btClearRichTextBox.Name = "btClearRichTextBox";
             this.btClearRichTextBox.Size = new System.Drawing.Size(136, 48);
             this.btClearRichTextBox.TabIndex = 4;
@@ -111,11 +114,29 @@ namespace Gauss_Jordan_Elimination
             this.label2.TabIndex = 7;
             this.label2.Text = "veľkosť matice (x*x):";
             // 
+            // panelInputValues
+            // 
+            this.panelInputValues.Controls.Add(this.labelValue);
+            this.panelInputValues.Location = new System.Drawing.Point(1118, 679);
+            this.panelInputValues.Name = "panelInputValues";
+            this.panelInputValues.Size = new System.Drawing.Size(355, 173);
+            this.panelInputValues.TabIndex = 8;
+            // 
+            // labelValue
+            // 
+            this.labelValue.AutoSize = true;
+            this.labelValue.Location = new System.Drawing.Point(19, 74);
+            this.labelValue.Name = "labelValue";
+            this.labelValue.Size = new System.Drawing.Size(61, 20);
+            this.labelValue.TabIndex = 0;
+            this.labelValue.Text = "Matrice";
+            // 
             // Graphic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2586, 1575);
+            this.Controls.Add(this.panelInputValues);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbInputMatrice);
             this.Controls.Add(this.btInput);
@@ -127,6 +148,8 @@ namespace Gauss_Jordan_Elimination
             this.Name = "Graphic";
             this.Text = "Gauss";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.panelInputValues.ResumeLayout(false);
+            this.panelInputValues.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,6 +165,8 @@ namespace Gauss_Jordan_Elimination
         private System.Windows.Forms.Button btInput;
         private System.Windows.Forms.TextBox tbInputMatrice;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panelInputValues;
+        private System.Windows.Forms.Label labelValue;
     }
 }
 

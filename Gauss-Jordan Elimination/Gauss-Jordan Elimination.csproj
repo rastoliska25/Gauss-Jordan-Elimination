@@ -53,6 +53,7 @@
     <Compile Include="Graphic.Designer.cs">
       <DependentUpon>Graphic.cs</DependentUpon>
     </Compile>
+    <Compile Include="Input.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Graphic.resx">

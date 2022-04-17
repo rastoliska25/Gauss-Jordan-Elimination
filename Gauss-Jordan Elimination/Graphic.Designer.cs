@@ -34,13 +34,16 @@ namespace Gauss_Jordan_Elimination
             this.btTest = new System.Windows.Forms.Button();
             this.richTextBox = new System.Windows.Forms.RichTextBox();
             this.btClearRichTextBox = new System.Windows.Forms.Button();
+            this.btInput = new System.Windows.Forms.Button();
+            this.tbInputMatrice = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Script MT Bold", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(1049, 28);
+            this.label1.Location = new System.Drawing.Point(1072, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(451, 45);
             this.label1.TabIndex = 0;
@@ -81,11 +84,41 @@ namespace Gauss_Jordan_Elimination
             this.btClearRichTextBox.UseVisualStyleBackColor = true;
             this.btClearRichTextBox.Click += new System.EventHandler(this.btClearRichTextBox_Click);
             // 
+            // btInput
+            // 
+            this.btInput.Location = new System.Drawing.Point(460, 298);
+            this.btInput.Name = "btInput";
+            this.btInput.Size = new System.Drawing.Size(136, 48);
+            this.btInput.TabIndex = 5;
+            this.btInput.Text = "Apply";
+            this.btInput.UseVisualStyleBackColor = true;
+            this.btInput.Click += new System.EventHandler(this.btInput_Click);
+            // 
+            // tbInputMatrice
+            // 
+            this.tbInputMatrice.Location = new System.Drawing.Point(294, 309);
+            this.tbInputMatrice.Name = "tbInputMatrice";
+            this.tbInputMatrice.Size = new System.Drawing.Size(160, 26);
+            this.tbInputMatrice.TabIndex = 6;
+            this.tbInputMatrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbInputMatrice_KeyPress);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(130, 312);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(150, 20);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "veľkosť matice (x*x):";
+            // 
             // Graphic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2586, 1575);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.tbInputMatrice);
+            this.Controls.Add(this.btInput);
             this.Controls.Add(this.btClearRichTextBox);
             this.Controls.Add(this.richTextBox);
             this.Controls.Add(this.btTest);
@@ -106,6 +139,9 @@ namespace Gauss_Jordan_Elimination
         private System.Windows.Forms.Button btTest;
         private System.Windows.Forms.RichTextBox richTextBox;
         private System.Windows.Forms.Button btClearRichTextBox;
+        private System.Windows.Forms.Button btInput;
+        private System.Windows.Forms.TextBox tbInputMatrice;
+        private System.Windows.Forms.Label label2;
     }
 }
 

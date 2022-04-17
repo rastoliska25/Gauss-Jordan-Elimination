@@ -19,7 +19,7 @@ namespace Gauss_Jordan_Elimination
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            richTextBox.ReadOnly = true;
         }
 
         private void btTest_Click(object sender, EventArgs e)
@@ -33,6 +33,30 @@ namespace Gauss_Jordan_Elimination
         private void btClearRichTextBox_Click(object sender, EventArgs e)
         {
             richTextBox.Text = "";
+        }
+
+        private void btInput_Click(object sender, EventArgs e)
+        {
+            int inputNumber = 0;
+            Input input = new Input();
+            input.input(Int32.TryParse(tbInputMatrice.Text, out inputNumber));
+            richTextBox.Text = input.input(4);
+        }
+
+        private void tbInputMatrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            bool badInput = false;
+            if ((!Char.IsNumber(e.KeyChar)) && (!(e.KeyChar == (char)8)) && (!(e.KeyChar == (char)13)))
+            {
+                badInput = true;
+                e.Handled = true;
+            }
+
+            if (badInput){
+                MessageBox.Show("please insert number from 1 to 10");
+                tbInputMatrice.Text = "";
+                badInput = false;
+            }
         }
     }
 }

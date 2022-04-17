@@ -32,6 +32,8 @@ namespace Gauss_Jordan_Elimination
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btTest = new System.Windows.Forms.Button();
+            this.richTextBox = new System.Windows.Forms.RichTextBox();
+            this.btClearRichTextBox = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -46,7 +48,7 @@ namespace Gauss_Jordan_Elimination
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(1036, 343);
+            this.textBox1.Location = new System.Drawing.Point(702, 156);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 26);
             this.textBox1.TabIndex = 1;
@@ -61,11 +63,31 @@ namespace Gauss_Jordan_Elimination
             this.btTest.UseVisualStyleBackColor = true;
             this.btTest.Click += new System.EventHandler(this.btTest_Click);
             // 
+            // richTextBox
+            // 
+            this.richTextBox.Location = new System.Drawing.Point(134, 412);
+            this.richTextBox.Name = "richTextBox";
+            this.richTextBox.Size = new System.Drawing.Size(2315, 1056);
+            this.richTextBox.TabIndex = 3;
+            this.richTextBox.Text = "";
+            // 
+            // btClearRichTextBox
+            // 
+            this.btClearRichTextBox.Location = new System.Drawing.Point(2313, 342);
+            this.btClearRichTextBox.Name = "btClearRichTextBox";
+            this.btClearRichTextBox.Size = new System.Drawing.Size(136, 48);
+            this.btClearRichTextBox.TabIndex = 4;
+            this.btClearRichTextBox.Text = "clear console";
+            this.btClearRichTextBox.UseVisualStyleBackColor = true;
+            this.btClearRichTextBox.Click += new System.EventHandler(this.btClearRichTextBox_Click);
+            // 
             // Graphic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2586, 1575);
+            this.Controls.Add(this.btClearRichTextBox);
+            this.Controls.Add(this.richTextBox);
             this.Controls.Add(this.btTest);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
@@ -82,6 +104,8 @@ namespace Gauss_Jordan_Elimination
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btTest;
+        private System.Windows.Forms.RichTextBox richTextBox;
+        private System.Windows.Forms.Button btClearRichTextBox;
     }
 }
 

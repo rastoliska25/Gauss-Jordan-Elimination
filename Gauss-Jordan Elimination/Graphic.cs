@@ -29,5 +29,10 @@ namespace Gauss_Jordan_Elimination
             sol = calculation.calculate(10);
             textBox1.Text = sol.ToString();
         }
+
+        private void btClearRichTextBox_Click(object sender, EventArgs e)
+        {
+            richTextBox.Text = "";
+        }
     }
 }

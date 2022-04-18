@@ -12,6 +12,10 @@ namespace Gauss_Jordan_Elimination
 {
     public partial class Graphic : Form
     {
+        int inputNumber, fillNumber;
+        int row = 1;
+        int col = 1;
+        int[,] matriceDataInput;
         public Graphic()
         {
             InitializeComponent();
@@ -23,14 +27,6 @@ namespace Gauss_Jordan_Elimination
             panelInputValues.Visible = false;
         }
 
-        private void btTest_Click(object sender, EventArgs e)
-        {
-            int sol;
-            Calculation calculation = new Calculation();
-            sol = calculation.calculate(10);
-            textBox1.Text = sol.ToString();
-        }
-
         private void btClearRichTextBox_Click(object sender, EventArgs e)
         {
             richTextBox.Text = "";
@@ -38,7 +34,7 @@ namespace Gauss_Jordan_Elimination
 
         private void btInput_Click(object sender, EventArgs e)
         {
-            int inputNumber = 0;
+            inputNumber = 0;
 
             Input input = new Input();
 
@@ -53,6 +49,8 @@ namespace Gauss_Jordan_Elimination
                 else
                 {
                     richTextBox.Text = input.input(inputNumber);
+                    row = 1;
+                    col = 1;
                 }
             }
             else
@@ -88,6 +86,8 @@ namespace Gauss_Jordan_Elimination
             else
             {
                 panelInputValues.Visible = true;
+                labelDataInputValue.Text = "Matrice [1][1]";
+                //inputData();
             }
         }
 
@@ -110,6 +110,41 @@ namespace Gauss_Jordan_Elimination
                 MessageBox.Show("please insert number from -100 to 100");
                 tbInputMatrice.Text = "";
             }
+        }
+
+        private void btInsertInputData_Click(object sender, EventArgs e)
+        {
+            if (tbInputData.Text == "")
+            {
+                MessageBox.Show("please insert number");
+            }
+            else
+            {
+                if (int.TryParse(tbInputData.Text, out fillNumber))
+                {
+                    //matriceDataInput[1, 1] = fillNumber;
+                    col++;
+                    if ((row == (inputNumber)) && (col == (inputNumber + 2)))
+                    {
+                        panelInputValues.Visible = false;
+                        Matrice matrice = new Matrice(matriceDataInput);
+                    }
+
+                    if (col == (inputNumber + 2))
+                    {
+                        col = 1;
+                        row++;
+                    }
+
+                    labelDataInputValue.Text = String.Format("Matrice [{0}][{1}]", row, col);
+                }
+                else
+                {
+                    MessageBox.Show("problem with parsing string to int - please load input again");
+                    return;
+                }
+            }
+
         }
     }
 }

@@ -42,6 +42,7 @@ namespace Gauss_Jordan_Elimination
             this.label3 = new System.Windows.Forms.Label();
             this.labelDataInputValue = new System.Windows.Forms.Label();
             this.btInsertData = new System.Windows.Forms.Button();
+            this.btCalculate = new System.Windows.Forms.Button();
             this.panelInputValues.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,15 +58,15 @@ namespace Gauss_Jordan_Elimination
             // 
             // richTextBox
             // 
-            this.richTextBox.Location = new System.Drawing.Point(125, 300);
+            this.richTextBox.Location = new System.Drawing.Point(120, 237);
             this.richTextBox.Name = "richTextBox";
-            this.richTextBox.Size = new System.Drawing.Size(2324, 1156);
+            this.richTextBox.Size = new System.Drawing.Size(2329, 1219);
             this.richTextBox.TabIndex = 3;
             this.richTextBox.Text = "";
             // 
             // btClearRichTextBox
             // 
-            this.btClearRichTextBox.Location = new System.Drawing.Point(2313, 237);
+            this.btClearRichTextBox.Location = new System.Drawing.Point(2308, 164);
             this.btClearRichTextBox.Name = "btClearRichTextBox";
             this.btClearRichTextBox.Size = new System.Drawing.Size(136, 48);
             this.btClearRichTextBox.TabIndex = 4;
@@ -75,7 +76,7 @@ namespace Gauss_Jordan_Elimination
             // 
             // btInput
             // 
-            this.btInput.Location = new System.Drawing.Point(461, 188);
+            this.btInput.Location = new System.Drawing.Point(456, 115);
             this.btInput.Name = "btInput";
             this.btInput.Size = new System.Drawing.Size(136, 48);
             this.btInput.TabIndex = 5;
@@ -85,7 +86,7 @@ namespace Gauss_Jordan_Elimination
             // 
             // tbInputMatrice
             // 
-            this.tbInputMatrice.Location = new System.Drawing.Point(280, 199);
+            this.tbInputMatrice.Location = new System.Drawing.Point(275, 126);
             this.tbInputMatrice.Name = "tbInputMatrice";
             this.tbInputMatrice.Size = new System.Drawing.Size(160, 26);
             this.tbInputMatrice.TabIndex = 6;
@@ -94,7 +95,7 @@ namespace Gauss_Jordan_Elimination
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(121, 202);
+            this.label2.Location = new System.Drawing.Point(116, 129);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 20);
             this.label2.TabIndex = 7;
@@ -160,7 +161,7 @@ namespace Gauss_Jordan_Elimination
             // 
             // btInsertData
             // 
-            this.btInsertData.Location = new System.Drawing.Point(125, 246);
+            this.btInsertData.Location = new System.Drawing.Point(120, 173);
             this.btInsertData.Name = "btInsertData";
             this.btInsertData.Size = new System.Drawing.Size(136, 39);
             this.btInsertData.TabIndex = 9;
@@ -168,11 +169,22 @@ namespace Gauss_Jordan_Elimination
             this.btInsertData.UseVisualStyleBackColor = true;
             this.btInsertData.Click += new System.EventHandler(this.btInsertData_Click);
             // 
+            // btCalculate
+            // 
+            this.btCalculate.Location = new System.Drawing.Point(275, 173);
+            this.btCalculate.Name = "btCalculate";
+            this.btCalculate.Size = new System.Drawing.Size(136, 39);
+            this.btCalculate.TabIndex = 10;
+            this.btCalculate.Text = "Calculate";
+            this.btCalculate.UseVisualStyleBackColor = true;
+            this.btCalculate.Click += new System.EventHandler(this.btCalculate_Click);
+            // 
             // Graphic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2586, 1575);
+            this.Controls.Add(this.btCalculate);
             this.Controls.Add(this.btInsertData);
             this.Controls.Add(this.panelInputValues);
             this.Controls.Add(this.label2);
@@ -206,6 +218,7 @@ namespace Gauss_Jordan_Elimination
         public System.Windows.Forms.Panel panelInputValues;
         public System.Windows.Forms.RichTextBox richTextBox;
         private System.Windows.Forms.Label labelDataInputValue;
+        private System.Windows.Forms.Button btCalculate;
     }
 }
 

@@ -26,6 +26,7 @@ namespace Gauss_Jordan_Elimination
             richTextBox.ReadOnly = true;
             panelInputValues.Visible = false;
             btInsertData.Enabled = false;
+            btCalculate.Enabled = false;
         }
 
         private void btClearRichTextBox_Click(object sender, EventArgs e)
@@ -118,6 +119,13 @@ namespace Gauss_Jordan_Elimination
             }
         }
 
+        private void btCalculate_Click(object sender, EventArgs e)
+        {
+            btCalculate.Enabled = false;
+            Calculation calculation = new Calculation(matriceDataInput);
+            richTextBox.Text = calculation.calculate();
+        }
+
         private void btInsertInputData_Click(object sender, EventArgs e)
         {
             if (tbInputData.Text == "")
@@ -137,6 +145,7 @@ namespace Gauss_Jordan_Elimination
                         panelInputValues.Visible = false;
                         Matrice matrice = new Matrice(matriceDataInput);
                         btInsertData.Enabled = false;
+                        btCalculate.Enabled = true;
                         arrayListing();
                     }
 

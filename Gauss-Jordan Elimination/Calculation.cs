@@ -8,21 +8,21 @@ namespace Gauss_Jordan_Elimination
 {
     class Calculation
     {
+        int[,] matrice;
+        string text;
         int row = 0;
-        int q = 10;
-        int col, i;
+        int col = 0;
 
-
-        public int calculate(int x)
+        public Calculation(int[,] matrice)
         {
-            for (int i = 1; i < q + 1; i++)
-            {
-                if (x % i == 0)
-                {
-                    row = 100;
-                }
-            }
-            return row;
+            this.matrice = matrice;
+        }
+
+        public string calculate()
+        {
+            text = String.Format("{0}  ", matrice[1, 1]);
+
+            return text;
         }
     }
 }

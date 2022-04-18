@@ -39,6 +39,11 @@ namespace Gauss_Jordan_Elimination
             this.label2 = new System.Windows.Forms.Label();
             this.panelInputValues = new System.Windows.Forms.Panel();
             this.labelValue = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbInputData = new System.Windows.Forms.TextBox();
+            this.btInsertInputData = new System.Windows.Forms.Button();
+            this.btInsertData = new System.Windows.Forms.Button();
+            this.btCancedlInputData = new System.Windows.Forms.Button();
             this.panelInputValues.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,9 +76,9 @@ namespace Gauss_Jordan_Elimination
             // 
             // richTextBox
             // 
-            this.richTextBox.Location = new System.Drawing.Point(134, 380);
+            this.richTextBox.Location = new System.Drawing.Point(134, 397);
             this.richTextBox.Name = "richTextBox";
-            this.richTextBox.Size = new System.Drawing.Size(2315, 1088);
+            this.richTextBox.Size = new System.Drawing.Size(2315, 1071);
             this.richTextBox.TabIndex = 3;
             this.richTextBox.Text = "";
             // 
@@ -99,7 +104,7 @@ namespace Gauss_Jordan_Elimination
             // 
             // tbInputMatrice
             // 
-            this.tbInputMatrice.Location = new System.Drawing.Point(294, 309);
+            this.tbInputMatrice.Location = new System.Drawing.Point(282, 309);
             this.tbInputMatrice.Name = "tbInputMatrice";
             this.tbInputMatrice.Size = new System.Drawing.Size(160, 26);
             this.tbInputMatrice.TabIndex = 6;
@@ -110,16 +115,20 @@ namespace Gauss_Jordan_Elimination
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(130, 312);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 20);
+            this.label2.Size = new System.Drawing.Size(131, 20);
             this.label2.TabIndex = 7;
-            this.label2.Text = "veľkosť matice (x*x):";
+            this.label2.Text = "matrice size (x*x):";
             // 
             // panelInputValues
             // 
+            this.panelInputValues.Controls.Add(this.btCancedlInputData);
+            this.panelInputValues.Controls.Add(this.btInsertInputData);
+            this.panelInputValues.Controls.Add(this.tbInputData);
+            this.panelInputValues.Controls.Add(this.label3);
             this.panelInputValues.Controls.Add(this.labelValue);
             this.panelInputValues.Location = new System.Drawing.Point(1118, 679);
             this.panelInputValues.Name = "panelInputValues";
-            this.panelInputValues.Size = new System.Drawing.Size(355, 173);
+            this.panelInputValues.Size = new System.Drawing.Size(355, 159);
             this.panelInputValues.TabIndex = 8;
             // 
             // labelValue
@@ -131,11 +140,58 @@ namespace Gauss_Jordan_Elimination
             this.labelValue.TabIndex = 0;
             this.labelValue.Text = "Matrice";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(131, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 20);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Data input";
+            // 
+            // tbInputData
+            // 
+            this.tbInputData.Location = new System.Drawing.Point(125, 74);
+            this.tbInputData.Name = "tbInputData";
+            this.tbInputData.Size = new System.Drawing.Size(100, 26);
+            this.tbInputData.TabIndex = 2;
+            this.tbInputData.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbInputData_KeyPress);
+            // 
+            // btInsertInputData
+            // 
+            this.btInsertInputData.Location = new System.Drawing.Point(248, 73);
+            this.btInsertInputData.Name = "btInsertInputData";
+            this.btInsertInputData.Size = new System.Drawing.Size(75, 27);
+            this.btInsertInputData.TabIndex = 3;
+            this.btInsertInputData.Text = "Insert";
+            this.btInsertInputData.UseVisualStyleBackColor = true;
+            // 
+            // btInsertData
+            // 
+            this.btInsertData.Location = new System.Drawing.Point(134, 352);
+            this.btInsertData.Name = "btInsertData";
+            this.btInsertData.Size = new System.Drawing.Size(136, 39);
+            this.btInsertData.TabIndex = 9;
+            this.btInsertData.Text = "Insert Data";
+            this.btInsertData.UseVisualStyleBackColor = true;
+            this.btInsertData.Click += new System.EventHandler(this.btInsertData_Click);
+            // 
+            // btCancedlInputData
+            // 
+            this.btCancedlInputData.Location = new System.Drawing.Point(248, 116);
+            this.btCancedlInputData.Name = "btCancedlInputData";
+            this.btCancedlInputData.Size = new System.Drawing.Size(75, 27);
+            this.btCancedlInputData.TabIndex = 4;
+            this.btCancedlInputData.Text = "Cancel";
+            this.btCancedlInputData.UseVisualStyleBackColor = true;
+            this.btCancedlInputData.Click += new System.EventHandler(this.btCancedlInputData_Click);
+            // 
             // Graphic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2586, 1575);
+            this.Controls.Add(this.btInsertData);
             this.Controls.Add(this.panelInputValues);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbInputMatrice);
@@ -167,6 +223,11 @@ namespace Gauss_Jordan_Elimination
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelInputValues;
         private System.Windows.Forms.Label labelValue;
+        private System.Windows.Forms.Button btInsertInputData;
+        private System.Windows.Forms.TextBox tbInputData;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btInsertData;
+        private System.Windows.Forms.Button btCancedlInputData;
     }
 }
 

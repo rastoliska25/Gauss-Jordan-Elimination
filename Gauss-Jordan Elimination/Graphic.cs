@@ -78,5 +78,38 @@ namespace Gauss_Jordan_Elimination
                 badInput = false;
             }
         }
+
+        private void btInsertData_Click(object sender, EventArgs e)
+        {
+            if (richTextBox.Text == "")
+            {
+                MessageBox.Show("please insert matrice size at first");
+            }
+            else
+            {
+                panelInputValues.Visible = true;
+            }
+        }
+
+        private void btCancedlInputData_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("do you really want to stop entering values?", "Cancel", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                richTextBox.Text = "";
+                panelInputValues.Visible = false;
+                tbInputMatrice.Text = "";
+            }
+        }
+
+        private void tbInputData_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!Char.IsNumber(e.KeyChar)) && (!(e.KeyChar == (char)8)) && (!(e.KeyChar == (char)13)) && (!(e.KeyChar == (char)45)))
+            {
+                e.Handled = true;
+                MessageBox.Show("please insert number from -100 to 100");
+                tbInputMatrice.Text = "";
+            }
+        }
     }
 }

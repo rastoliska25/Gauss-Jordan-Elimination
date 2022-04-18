@@ -87,7 +87,7 @@ namespace Gauss_Jordan_Elimination
             {
                 panelInputValues.Visible = true;
                 labelDataInputValue.Text = "Matrice [1][1]";
-                //inputData();
+                inputData(inputNumber);
             }
         }
 
@@ -122,7 +122,9 @@ namespace Gauss_Jordan_Elimination
             {
                 if (int.TryParse(tbInputData.Text, out fillNumber))
                 {
-                    //matriceDataInput[1, 1] = fillNumber;
+                    //data into matrice
+                    matriceDataInput[row-1, col-1] = fillNumber;
+
                     col++;
                     if ((row == (inputNumber)) && (col == (inputNumber + 2)))
                     {
@@ -144,7 +146,13 @@ namespace Gauss_Jordan_Elimination
                     return;
                 }
             }
-
         }
+
+        private void inputData(int x)
+        {
+            matriceDataInput = new int[x, x+1];
+        }
+
+        private void 
     }
 }

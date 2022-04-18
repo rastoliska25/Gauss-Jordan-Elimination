@@ -13,9 +13,9 @@ namespace Gauss_Jordan_Elimination
         int[,] matriceInput;
         public string input(int x)
         {
-            for (int row = 1; row < x + 1; row++)
+            for (int row = 0; row < x; row++)
             {
-                for (int col = 1; col < x + 1; col++)
+                for (int col = 0; col < x + 1; col++)
                 {
                     inputText = inputText + "0  ";
                 }

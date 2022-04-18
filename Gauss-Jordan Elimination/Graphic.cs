@@ -12,7 +12,7 @@ namespace Gauss_Jordan_Elimination
 {
     public partial class Graphic : Form
     {
-        int inputNumber, fillNumber;
+        int inputNumber, fillNumber, i, j;
         int row = 1;
         int col = 1;
         int[,] matriceDataInput;
@@ -25,11 +25,15 @@ namespace Gauss_Jordan_Elimination
         {
             richTextBox.ReadOnly = true;
             panelInputValues.Visible = false;
+            btInsertData.Enabled = false;
         }
 
         private void btClearRichTextBox_Click(object sender, EventArgs e)
         {
             richTextBox.Text = "";
+            tbInputMatrice.Text = "";
+            row = 1;
+            col = 1;
         }
 
         private void btInput_Click(object sender, EventArgs e)
@@ -49,6 +53,7 @@ namespace Gauss_Jordan_Elimination
                 else
                 {
                     richTextBox.Text = input.input(inputNumber);
+                    btInsertData.Enabled = true;
                     row = 1;
                     col = 1;
                 }
@@ -98,6 +103,7 @@ namespace Gauss_Jordan_Elimination
             {
                 richTextBox.Text = "";
                 panelInputValues.Visible = false;
+                btInsertData.Enabled = false;
                 tbInputMatrice.Text = "";
             }
         }
@@ -123,13 +129,15 @@ namespace Gauss_Jordan_Elimination
                 if (int.TryParse(tbInputData.Text, out fillNumber))
                 {
                     //data into matrice
-                    matriceDataInput[row-1, col-1] = fillNumber;
+                    matriceDataInput[row - 1, col - 1] = fillNumber;
 
                     col++;
                     if ((row == (inputNumber)) && (col == (inputNumber + 2)))
                     {
                         panelInputValues.Visible = false;
                         Matrice matrice = new Matrice(matriceDataInput);
+                        btInsertData.Enabled = false;
+                        arrayListing();
                     }
 
                     if (col == (inputNumber + 2))
@@ -137,7 +145,7 @@ namespace Gauss_Jordan_Elimination
                         col = 1;
                         row++;
                     }
-
+                    arrayListing();
                     labelDataInputValue.Text = String.Format("Matrice [{0}][{1}]", row, col);
                 }
                 else
@@ -150,9 +158,21 @@ namespace Gauss_Jordan_Elimination
 
         private void inputData(int x)
         {
-            matriceDataInput = new int[x, x+1];
+            matriceDataInput = new int[x, x + 1];
         }
 
-        private void 
+        private void arrayListing()
+        {
+            string inputText = "";
+            for (i = 0; i < inputNumber; i++)
+            {
+                for (j = 0; j < inputNumber + 1; j++)
+                {
+                    inputText = inputText + String.Format("{0}  ", matriceDataInput[i, j]);
+                }
+                inputText = inputText + "\n\n";
+            }
+            richTextBox.Text = inputText;
+        }
     }
 }

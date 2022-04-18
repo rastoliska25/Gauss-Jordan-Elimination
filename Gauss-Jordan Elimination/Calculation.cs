@@ -54,7 +54,7 @@ namespace Gauss_Jordan_Elimination
             //solution string
             for (row = 1; row <= n; row++)
             {
-                text = text + String.Format("{0}  ", arraySolution[row]);
+                text = text + String.Format("{0}    ", arraySolution[row]);
             }
             return text;
         }

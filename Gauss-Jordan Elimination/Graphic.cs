@@ -123,7 +123,7 @@ namespace Gauss_Jordan_Elimination
         {
             btCalculate.Enabled = false;
             Calculation calculation = new Calculation(matriceDataInput);
-            richTextBox.Text = richTextBox.Text + "/n/n/n" + calculation.calculate(inputNumber);
+            richTextBox.Text = richTextBox.Text + "\n\n\n" + calculation.calculate(inputNumber);
         }
 
         private void btInsertInputData_Click(object sender, EventArgs e)
@@ -155,6 +155,8 @@ namespace Gauss_Jordan_Elimination
                         row++;
                     }
                     arrayListing();
+                    tbInputData.Text = "";
+                    this.ActiveControl = tbInputData;
                     labelDataInputValue.Text = String.Format("Matrice [{0}][{1}]", row, col);
                 }
                 else
@@ -177,7 +179,7 @@ namespace Gauss_Jordan_Elimination
             {
                 for (j = 0; j < inputNumber + 1; j++)
                 {
-                    inputText = inputText + String.Format("{0}  ", matriceDataInput[i, j]);
+                    inputText = inputText + String.Format("{0}      ", matriceDataInput[i, j]);
                 }
                 inputText = inputText + "\n\n";
             }

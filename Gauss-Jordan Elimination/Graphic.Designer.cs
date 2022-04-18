@@ -58,6 +58,7 @@ namespace Gauss_Jordan_Elimination
             // 
             // richTextBox
             // 
+            this.richTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.richTextBox.Location = new System.Drawing.Point(120, 237);
             this.richTextBox.Name = "richTextBox";
             this.richTextBox.Size = new System.Drawing.Size(2329, 1219);
@@ -76,7 +77,7 @@ namespace Gauss_Jordan_Elimination
             // 
             // btInput
             // 
-            this.btInput.Location = new System.Drawing.Point(456, 115);
+            this.btInput.Location = new System.Drawing.Point(437, 115);
             this.btInput.Name = "btInput";
             this.btInput.Size = new System.Drawing.Size(136, 48);
             this.btInput.TabIndex = 5;
@@ -86,7 +87,7 @@ namespace Gauss_Jordan_Elimination
             // 
             // tbInputMatrice
             // 
-            this.tbInputMatrice.Location = new System.Drawing.Point(275, 126);
+            this.tbInputMatrice.Location = new System.Drawing.Point(262, 126);
             this.tbInputMatrice.Name = "tbInputMatrice";
             this.tbInputMatrice.Size = new System.Drawing.Size(160, 26);
             this.tbInputMatrice.TabIndex = 6;
@@ -117,7 +118,7 @@ namespace Gauss_Jordan_Elimination
             // 
             this.btCancedlInputData.Location = new System.Drawing.Point(248, 116);
             this.btCancedlInputData.Name = "btCancedlInputData";
-            this.btCancedlInputData.Size = new System.Drawing.Size(75, 27);
+            this.btCancedlInputData.Size = new System.Drawing.Size(75, 40);
             this.btCancedlInputData.TabIndex = 4;
             this.btCancedlInputData.Text = "Cancel";
             this.btCancedlInputData.UseVisualStyleBackColor = true;
@@ -125,9 +126,9 @@ namespace Gauss_Jordan_Elimination
             // 
             // btInsertInputData
             // 
-            this.btInsertInputData.Location = new System.Drawing.Point(248, 73);
+            this.btInsertInputData.Location = new System.Drawing.Point(248, 63);
             this.btInsertInputData.Name = "btInsertInputData";
-            this.btInsertInputData.Size = new System.Drawing.Size(75, 27);
+            this.btInsertInputData.Size = new System.Drawing.Size(75, 37);
             this.btInsertInputData.TabIndex = 3;
             this.btInsertInputData.Text = "Insert";
             this.btInsertInputData.UseVisualStyleBackColor = true;
@@ -135,7 +136,7 @@ namespace Gauss_Jordan_Elimination
             // 
             // tbInputData
             // 
-            this.tbInputData.Location = new System.Drawing.Point(125, 74);
+            this.tbInputData.Location = new System.Drawing.Point(135, 71);
             this.tbInputData.Name = "tbInputData";
             this.tbInputData.Size = new System.Drawing.Size(100, 26);
             this.tbInputData.TabIndex = 2;

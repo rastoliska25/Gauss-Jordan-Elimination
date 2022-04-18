@@ -17,7 +17,7 @@ namespace Gauss_Jordan_Elimination
             {
                 for (int col = 0; col < x + 1; col++)
                 {
-                    inputText = inputText + "0  ";
+                    inputText = inputText + "0      ";
                 }
                 inputText = inputText + "\n\n";
             }

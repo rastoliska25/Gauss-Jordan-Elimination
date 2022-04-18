@@ -8,9 +8,9 @@ namespace Gauss_Jordan_Elimination
 {
     public class Matrice
     {
-        int[,] input;
+        float[,] input;
 
-        public Matrice(int[,] input)
+        public Matrice(float[,] input)
         {
             this.input = input;
         }

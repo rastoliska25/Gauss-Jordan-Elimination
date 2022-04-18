@@ -15,7 +15,7 @@ namespace Gauss_Jordan_Elimination
         int inputNumber, fillNumber, i, j;
         int row = 1;
         int col = 1;
-        int[,] matriceDataInput;
+        float[,] matriceDataInput;
         public Graphic()
         {
             InitializeComponent();
@@ -123,7 +123,7 @@ namespace Gauss_Jordan_Elimination
         {
             btCalculate.Enabled = false;
             Calculation calculation = new Calculation(matriceDataInput);
-            richTextBox.Text = calculation.calculate();
+            richTextBox.Text = richTextBox.Text + "/n/n/n" + calculation.calculate(inputNumber);
         }
 
         private void btInsertInputData_Click(object sender, EventArgs e)
@@ -167,7 +167,7 @@ namespace Gauss_Jordan_Elimination
 
         private void inputData(int x)
         {
-            matriceDataInput = new int[x, x + 1];
+            matriceDataInput = new float[x, x + 1];
         }
 
         private void arrayListing()

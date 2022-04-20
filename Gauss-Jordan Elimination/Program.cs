@@ -14,8 +14,6 @@ namespace Gauss_Jordan_Elimination
         [STAThread]
         static void Main()
         {
-            int sol;
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Graphic());

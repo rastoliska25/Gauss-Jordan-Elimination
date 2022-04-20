@@ -8,7 +8,7 @@ namespace Gauss_Jordan_Elimination
 {
     public class Matrice
     {
-        float[,] input;
+        public float[,] input;
 
         public Matrice(float[,] input)
         {

@@ -8,6 +8,7 @@ namespace Gauss_Jordan_Elimination
 {
     class Input
     {
+
         string inputText;
         public string input(int x)
         {

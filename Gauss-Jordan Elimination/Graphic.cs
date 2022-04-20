@@ -16,6 +16,7 @@ namespace Gauss_Jordan_Elimination
         int row = 1;
         int col = 1;
         float[,] matriceDataInput;
+        Matrice matrice;
 
         public Graphic()
         {
@@ -166,7 +167,7 @@ namespace Gauss_Jordan_Elimination
             }
         }
 
-        public void inputData(int x)
+        private void inputData(int x)
         {
             matriceDataInput = new float[x, x + 1];
         }

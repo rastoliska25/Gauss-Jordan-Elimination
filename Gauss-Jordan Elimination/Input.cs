@@ -9,8 +9,6 @@ namespace Gauss_Jordan_Elimination
     class Input
     {
         string inputText;
-        int row, col;
-        float[,] matriceInput;
         public string input(int x)
         {
             for (int row = 0; row < x; row++)
@@ -21,8 +19,6 @@ namespace Gauss_Jordan_Elimination
                 }
                 inputText = inputText + "\n\n";
             }
-            matriceInput = new float[x, x];
-            Matrice matrice = new Matrice(matriceInput);
             return inputText;
         }
 

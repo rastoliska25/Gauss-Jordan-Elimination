@@ -51,7 +51,6 @@ namespace Gauss_Jordan_Elimination
                 arraySolution[row] = (matrice[row - 1, n] - sum) / matrice[row - 1, row - 1];
             }
 
-            //solution string
             for (row = 1; row <= n; row++)
             {
                 text = text + String.Format("{0}    ", arraySolution[row]);

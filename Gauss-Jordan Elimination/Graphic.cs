@@ -16,6 +16,7 @@ namespace Gauss_Jordan_Elimination
         int row = 1;
         int col = 1;
         float[,] matriceDataInput;
+
         public Graphic()
         {
             InitializeComponent();
@@ -55,6 +56,7 @@ namespace Gauss_Jordan_Elimination
                 {
                     richTextBox.Text = input.input(inputNumber);
                     btInsertData.Enabled = true;
+                    inputData(inputNumber);
                     row = 1;
                     col = 1;
                 }
@@ -93,7 +95,6 @@ namespace Gauss_Jordan_Elimination
             {
                 panelInputValues.Visible = true;
                 labelDataInputValue.Text = "Matrice [1][1]";
-                inputData(inputNumber);
             }
         }
 
@@ -138,12 +139,10 @@ namespace Gauss_Jordan_Elimination
                 {
                     //data into matrice
                     matriceDataInput[row - 1, col - 1] = fillNumber;
-
                     col++;
                     if ((row == (inputNumber)) && (col == (inputNumber + 2)))
                     {
                         panelInputValues.Visible = false;
-                        Matrice matrice = new Matrice(matriceDataInput);
                         btInsertData.Enabled = false;
                         btCalculate.Enabled = true;
                         arrayListing();
@@ -167,7 +166,7 @@ namespace Gauss_Jordan_Elimination
             }
         }
 
-        private void inputData(int x)
+        public void inputData(int x)
         {
             matriceDataInput = new float[x, x + 1];
         }
